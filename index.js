@@ -1,12 +1,18 @@
-const http = require('http');
-const PORT = 3000;
+const mineflayer = require('mineflayer');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World!');
-});
+console.log('Starting...')
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+function createBot () {
+    const bot = mineflayer.createBot({
+    host: "g3.gamely.pro",
+    port: "20103",
+    username: "MOPSLAND_BOT",
+    version: false
+    })
+    bot.on('login', function() {
+      bot.chat('/register 123123123 123123123')
+      bot.chat('/login 123123123 123123123')
+      bot.chat('/server server2')
+    })
+}
+createBot()
