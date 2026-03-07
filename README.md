@@ -1,4 +1,4 @@
-![image](https://imgur.com/IFUxBlI,"screenshot")
+![image](https://imgur.com/a/tYZyMeC,"screenshot")
 
 # nodejs
 A minimal Node.js web application.
